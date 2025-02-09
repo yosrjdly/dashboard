@@ -1,0 +1,22 @@
+import Sidebar from "./Sidebar";
+import SettingsButton from "../components/layout*";
+import { Box } from "@mui/material";
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <Box sx={{ display: "flex" }}>
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content */}
+      <Box sx={{ flexGrow: 1, p: 3 }}>
+        {children}
+      </Box>
+
+      {/* Settings Button (Fixed Bottom Left) */}
+      <SettingsButton />
+    </Box>
+  );
+};
+
+export default Layout;
